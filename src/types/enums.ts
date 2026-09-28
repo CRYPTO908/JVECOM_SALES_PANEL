@@ -1,0 +1,263 @@
+// ============================================================================
+// SalesOS — Enumerations
+// ============================================================================
+
+// User Roles
+export enum UserRole {
+  SUPER_ADMIN = 'SUPER_ADMIN',
+  ORG_ADMIN = 'ORG_ADMIN',
+  MANAGER = 'MANAGER',
+  SALES_REP = 'SALES_REP',
+}
+
+// Organization Status
+export enum OrgStatus {
+  ACTIVE = 'ACTIVE',
+  SUSPENDED = 'SUSPENDED',
+  TRIAL = 'TRIAL',
+}
+
+// Employee / Profile Status
+export enum EmployeeStatus {
+  ACTIVE = 'ACTIVE',
+  INACTIVE = 'INACTIVE',
+  INVITED = 'INVITED',
+  SUSPENDED = 'SUSPENDED',
+}
+
+// Team Status
+export enum TeamStatus {
+  ACTIVE = 'ACTIVE',
+  INACTIVE = 'INACTIVE',
+}
+
+// Product Status
+export enum ProductStatus {
+  ACTIVE = 'ACTIVE',
+  ARCHIVED = 'ARCHIVED',
+  DRAFT = 'DRAFT',
+}
+
+// Customer Status
+export enum CustomerStatus {
+  LEAD = 'LEAD',
+  PROSPECT = 'PROSPECT',
+  CUSTOMER = 'CUSTOMER',
+  LOST = 'LOST',
+}
+
+// Lead Stages
+export enum LeadStage {
+  NEW = 'NEW',
+  CONTACTED = 'CONTACTED',
+  QUALIFIED = 'QUALIFIED',
+  DEMO = 'DEMO',
+  NEGOTIATION = 'NEGOTIATION',
+  WON = 'WON',
+  LOST = 'LOST',
+}
+
+// Lead Activity Types
+export enum LeadActivityType {
+  CALL = 'CALL',
+  EMAIL = 'EMAIL',
+  WHATSAPP = 'WHATSAPP',
+  MEETING = 'MEETING',
+  DEMO = 'DEMO',
+  NOTE = 'NOTE',
+  FOLLOW_UP = 'FOLLOW_UP',
+}
+
+// Follow-up Status
+export enum FollowUpStatus {
+  PENDING = 'PENDING',
+  COMPLETED = 'COMPLETED',
+  RESCHEDULED = 'RESCHEDULED',
+  CANCELLED = 'CANCELLED',
+}
+
+// Payment Status
+export enum PaymentStatus {
+  PENDING = 'PENDING',
+  PAID = 'PAID',
+  REFUNDED = 'REFUNDED',
+  CANCELLED = 'CANCELLED',
+}
+
+// Payment Methods
+export enum PaymentMethod {
+  CASH = 'CASH',
+  CARD = 'CARD',
+  UPI = 'UPI',
+  BANK_TRANSFER = 'BANK_TRANSFER',
+  ONLINE_PAYMENT = 'ONLINE_PAYMENT',
+  OTHER = 'OTHER',
+}
+
+// Target Types
+export enum TargetType {
+  SALES_COUNT = 'SALES_COUNT',
+  REVENUE = 'REVENUE',
+  PRODUCT_QUANTITY = 'PRODUCT_QUANTITY',
+  PRODUCT_REVENUE = 'PRODUCT_REVENUE',
+}
+
+// Target Scope
+export enum TargetScope {
+  INDIVIDUAL = 'INDIVIDUAL',
+  TEAM = 'TEAM',
+  ORGANIZATION = 'ORGANIZATION',
+}
+
+// Target Period
+export enum TargetPeriod {
+  DAILY = 'DAILY',
+  WEEKLY = 'WEEKLY',
+  MONTHLY = 'MONTHLY',
+  QUARTERLY = 'QUARTERLY',
+  YEARLY = 'YEARLY',
+  CUSTOM = 'CUSTOM',
+}
+
+// XP Source Types
+export enum XPSourceType {
+  SALE = 'SALE',
+  REVENUE = 'REVENUE',
+  TARGET_ACHIEVEMENT = 'TARGET_ACHIEVEMENT',
+  ACHIEVEMENT = 'ACHIEVEMENT',
+  MILESTONE = 'MILESTONE',
+  MANUAL = 'MANUAL',
+}
+
+// Commission Rule Types
+export enum CommissionRuleType {
+  PERCENTAGE = 'PERCENTAGE',
+  FIXED = 'FIXED',
+  TIERED = 'TIERED',
+}
+
+// Commission/Bonus Record Status
+export enum CompensationStatus {
+  PENDING = 'PENDING',
+  APPROVED = 'APPROVED',
+  PAID = 'PAID',
+  REVERSED = 'REVERSED',
+}
+
+// Bonus Condition Types
+export enum BonusConditionType {
+  SALES_COUNT = 'SALES_COUNT',
+  REVENUE = 'REVENUE',
+  TARGET_ACHIEVEMENT = 'TARGET_ACHIEVEMENT',
+  PRODUCT_SALES = 'PRODUCT_SALES',
+  TEAM_PERFORMANCE = 'TEAM_PERFORMANCE',
+}
+
+// Notification Types
+export enum NotificationType {
+  LEAD_ASSIGNED = 'LEAD_ASSIGNED',
+  FOLLOW_UP_DUE = 'FOLLOW_UP_DUE',
+  FOLLOW_UP_OVERDUE = 'FOLLOW_UP_OVERDUE',
+  TARGET_MILESTONE = 'TARGET_MILESTONE',
+  TARGET_ACHIEVED = 'TARGET_ACHIEVED',
+  ACHIEVEMENT_UNLOCKED = 'ACHIEVEMENT_UNLOCKED',
+  LEADERBOARD_CHANGE = 'LEADERBOARD_CHANGE',
+  COMMISSION_APPROVED = 'COMMISSION_APPROVED',
+  BONUS_APPROVED = 'BONUS_APPROVED',
+  PERFORMANCE_REPORT = 'PERFORMANCE_REPORT',
+  SALE_CREATED = 'SALE_CREATED',
+  SALE_REFUNDED = 'SALE_REFUNDED',
+  EMPLOYEE_INVITED = 'EMPLOYEE_INVITED',
+  GENERAL = 'GENERAL',
+}
+
+// Audit Actions
+export enum AuditAction {
+  EMPLOYEE_CREATED = 'EMPLOYEE_CREATED',
+  EMPLOYEE_UPDATED = 'EMPLOYEE_UPDATED',
+  EMPLOYEE_DEACTIVATED = 'EMPLOYEE_DEACTIVATED',
+  EMPLOYEE_REACTIVATED = 'EMPLOYEE_REACTIVATED',
+  TEAM_CREATED = 'TEAM_CREATED',
+  TEAM_UPDATED = 'TEAM_UPDATED',
+  PRODUCT_CREATED = 'PRODUCT_CREATED',
+  PRODUCT_UPDATED = 'PRODUCT_UPDATED',
+  CUSTOMER_CREATED = 'CUSTOMER_CREATED',
+  CUSTOMER_UPDATED = 'CUSTOMER_UPDATED',
+  LEAD_CREATED = 'LEAD_CREATED',
+  LEAD_UPDATED = 'LEAD_UPDATED',
+  LEAD_REASSIGNED = 'LEAD_REASSIGNED',
+  LEAD_STAGE_CHANGED = 'LEAD_STAGE_CHANGED',
+  SALE_CREATED = 'SALE_CREATED',
+  SALE_UPDATED = 'SALE_UPDATED',
+  SALE_REFUNDED = 'SALE_REFUNDED',
+  SALE_CANCELLED = 'SALE_CANCELLED',
+  TARGET_CREATED = 'TARGET_CREATED',
+  TARGET_UPDATED = 'TARGET_UPDATED',
+  XP_AWARDED = 'XP_AWARDED',
+  XP_REVERSED = 'XP_REVERSED',
+  ACHIEVEMENT_UNLOCKED = 'ACHIEVEMENT_UNLOCKED',
+  COMMISSION_CREATED = 'COMMISSION_CREATED',
+  COMMISSION_APPROVED = 'COMMISSION_APPROVED',
+  COMMISSION_REVERSED = 'COMMISSION_REVERSED',
+  BONUS_CREATED = 'BONUS_CREATED',
+  BONUS_APPROVED = 'BONUS_APPROVED',
+  BONUS_REVERSED = 'BONUS_REVERSED',
+  SETTINGS_CHANGED = 'SETTINGS_CHANGED',
+  ORGANIZATION_UPDATED = 'ORGANIZATION_UPDATED',
+  INVITATION_SENT = 'INVITATION_SENT',
+  INVITATION_ACCEPTED = 'INVITATION_ACCEPTED',
+}
+
+// Entity Types for audit/notification references
+export enum EntityType {
+  ORGANIZATION = 'ORGANIZATION',
+  PROFILE = 'PROFILE',
+  TEAM = 'TEAM',
+  PRODUCT = 'PRODUCT',
+  CUSTOMER = 'CUSTOMER',
+  LEAD = 'LEAD',
+  SALE = 'SALE',
+  TARGET = 'TARGET',
+  XP_TRANSACTION = 'XP_TRANSACTION',
+  ACHIEVEMENT = 'ACHIEVEMENT',
+  COMMISSION = 'COMMISSION',
+  BONUS = 'BONUS',
+  INVITATION = 'INVITATION',
+  SETTINGS = 'SETTINGS',
+}
+
+// Email Template Types
+export enum EmailTemplate {
+  EMPLOYEE_INVITATION = 'EMPLOYEE_INVITATION',
+  PASSWORD_RESET = 'PASSWORD_RESET',
+  LEAD_ASSIGNMENT = 'LEAD_ASSIGNMENT',
+  FOLLOW_UP_REMINDER = 'FOLLOW_UP_REMINDER',
+  TARGET_MILESTONE = 'TARGET_MILESTONE',
+  ACHIEVEMENT_UNLOCKED = 'ACHIEVEMENT_UNLOCKED',
+  COMMISSION_STATEMENT = 'COMMISSION_STATEMENT',
+  BONUS_NOTIFICATION = 'BONUS_NOTIFICATION',
+  MONTHLY_PERFORMANCE = 'MONTHLY_PERFORMANCE',
+}
+
+// Invitation Status
+export enum InvitationStatus {
+  PENDING = 'PENDING',
+  ACCEPTED = 'ACCEPTED',
+  EXPIRED = 'EXPIRED',
+  CANCELLED = 'CANCELLED',
+}
+
+// Default Lead Sources
+export const DEFAULT_LEAD_SOURCES = [
+  'Website',
+  'WhatsApp',
+  'Phone',
+  'Referral',
+  'Advertisement',
+  'Social Media',
+  'Walk-in',
+  'Other',
+] as const;
+
+// Default Target Milestones
+export const DEFAULT_MILESTONES = [25, 50, 75, 100, 125, 150, 200] as const;
